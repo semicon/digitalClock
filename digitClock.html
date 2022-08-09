@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+    <meta charset="UTF-8">
+
+  <title>Digital Clock</title>
+  
+  
+  
+  
+<style>
+
+    @import url('https://fonts.googleapis.com/css?family=Orbitron');
+    @import url('https://semicon.github.io/fonts/stylesheet.css?family=digital-7regular&family=digital-7_monomono&family=cursed_timer_ulilregular');
+
+    body {
+        background-color: #121212;
+    }
+
+    .clock {
+        font-family: 'Orbitron', sans-serif;
+        color: #66ff99;
+        font-size: 56px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .clock2 {
+        font-family: 'digital-7regular';
+        color: #66ff99;
+        font-size: 56px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .clock3 {
+        font-family: 'digital-7_monomono';
+        color: #66ff99;
+        font-size: 56px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .clock4 {
+        font-family: 'cursed_timer_ulilregular';
+        color: #66ff99;
+        font-size: 56px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .txt{
+        color:#fff; 
+        font-size:1.5rem; 
+        text-align: center;
+    }
+
+    
+</style>
+
+</head>
+
+<body translate="no" >
+    <div class="txt">font-family: 'Orbitron'</div>
+    <div class="clock" id="clock"></div>
+    <div class="txt">font-family: 'digital-7regular'</div>
+    <div class="clock2" id="clock2"></div>
+    <div class="txt">font-family: 'digital-7_monomono'</div>
+    <div class="clock3" id="clock3"></div>
+    <div class="txt">font-family: 'cursed_timer_ulilregular'</div>
+    <div class="clock4" id="clock4"></div>
+
+    <script id="rendered-js" >
+        function currentTime() {
+            var date = new Date(); /* creating object of Date class */
+            var hour = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+                hour = updateTime(hour);
+                min = updateTime(min);
+                sec = updateTime(sec);
+                document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+                document.getElementById("clock2").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+                document.getElementById("clock3").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+                document.getElementById("clock4").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+            var t = setTimeout(function () {currentTime();}, 1000); /* setting timer */
+        }
+
+        function updateTime(k) {
+            if (k < 10) {
+                return "0" + k;
+            } else
+            {
+                return k;
+            }
+        }
+
+        currentTime(); 
+    </script>
+
+</body>
+
+</html>
+ 
