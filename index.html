@@ -59,7 +59,7 @@
 				let seconds = timeNow.getSeconds();
 				let weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 				let today = weekDay[timeNow.getDay()];
-				let months = timeNow.toLocaleString("default", {
+				let months = timeNow.toLocaleString("en", {
 					month: "long"
 				});
 				let year = timeNow.getFullYear();
